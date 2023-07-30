@@ -11,5 +11,7 @@ namespace APIClientes.Data
         }
 
         public DbSet<Cliente> Clientes { get; set; }
+        //crear propiedad tipo DbSet invocando el modelo usuario y le ponemos nombre users
+        public DbSet<User> Users { get; set; }
     }
 }
