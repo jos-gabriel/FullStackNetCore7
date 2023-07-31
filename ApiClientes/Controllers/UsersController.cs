@@ -3,6 +3,7 @@ using APIClientes.Modelos.Dto;
 using APIClientes.Repositorio;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Identity.Client;
 
 namespace APIClientes.Controllers
 {
@@ -41,6 +42,28 @@ namespace APIClientes.Controllers
             _response.DisplayMessage = "Usuario creado con Exito!";
             _response.Result = respuesta;
             return Ok(_response);
+        }
+
+        [HttpPost("Login")]
+        public async Task<ActionResult> Login(UserDto user)
+        {
+            var respuesta = await _userRepositorio.Login(user.UserName, user.Password);
+
+            if (respuesta == "nouser")
+            {
+                _response.IsSuccess = false;
+                _response.DisplayMessage = "Usuario no existe";
+                return BadRequest(_response);
+
+            }
+            if (respuesta == "wrongpassword")
+            {
+                _response.IsSuccess = false;
+                _response.DisplayMessage = "Password incorrecto";
+                return BadRequest(_response);
+            }
+
+            return Ok("Usuario conectado");
         }
     }
 }
