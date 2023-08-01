@@ -26,21 +26,25 @@ namespace APIClientes.Controllers
                     new User {
                         UserName = user.UserName
                     }, user.Password);
-            if (respuesta == -1)
+            if (respuesta == "existe")
             {
                 _response.IsSuccess = false;
                 _response.DisplayMessage = "Usuario ya Existe";
                 return BadRequest(_response);
 
             }
-            if (respuesta == -500)
+            if (respuesta == "error")
             {
                 _response.IsSuccess = false;
                 _response.DisplayMessage = "Error al crear el Usuario";
                 return BadRequest(_response);
             }
             _response.DisplayMessage = "Usuario creado con Exito!";
-            _response.Result = respuesta;
+            //_response.Result = respuesta;
+            JwTPackage jtp = new JwTPackage();
+            jtp.UserName = user.UserName;
+            jtp.Token = respuesta;
+            _response.Result = jtp;
             return Ok(_response);
         }
 
@@ -63,9 +67,19 @@ namespace APIClientes.Controllers
                 return BadRequest(_response);
             }
 
-            _response.Result = respuesta;
+            //_response.Result = respuesta;
+            JwTPackage jtp = new JwTPackage();
+            jtp.UserName = user.UserName;
+            jtp.Token = respuesta;
+            _response.Result = jtp;
             _response.DisplayMessage = "Usuario Conectado";
             return Ok(_response);
         }
+    }
+
+    public class JwTPackage
+    {
+        public string UserName { get; set; }
+        public string Token { get; set; }
     }
 }
