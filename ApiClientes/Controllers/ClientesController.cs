@@ -10,11 +10,13 @@ using APIClientes.Modelos;
 using APIClientes.Repositorio;
 using APIClientes.Modelos.Dto;
 using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Authorization;
 
 namespace APIClientes.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class ClientesController : ControllerBase
     {
         

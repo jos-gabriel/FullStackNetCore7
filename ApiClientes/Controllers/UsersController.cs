@@ -63,7 +63,9 @@ namespace APIClientes.Controllers
                 return BadRequest(_response);
             }
 
-            return Ok("Usuario conectado");
+            _response.Result = respuesta;
+            _response.DisplayMessage = "Usuario Conectado";
+            return Ok(_response);
         }
     }
 }
