@@ -8,6 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ClienteService } from './cliente.service';
 import { AppRouterModule } from './app-router.module';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [  
     BrowserModule,
     AppRouterModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [ClienteService],
   bootstrap: [AppComponent]
