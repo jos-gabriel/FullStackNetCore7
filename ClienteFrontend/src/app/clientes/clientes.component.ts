@@ -17,7 +17,8 @@ export class ClientesComponent {
   displayedColumns: string[] = [
     'nombres',
     'apellidos',
-    'direccion'
+    'direccion',
+    'acciones'
   ]
 
   constructor(private service: ClienteService) {
@@ -27,9 +28,12 @@ export class ClientesComponent {
 
     this.service.getClientes().subscribe((data:any) => {
       this.dataSource = new MatTableDataSource<ClienteInterface>(data.result as ClienteInterface[])
-      console.log(data)
     })
 
+  }
+
+  actualizarCliente(cliente: ClienteInterface){
+    console.log(cliente)
   }
 
 }

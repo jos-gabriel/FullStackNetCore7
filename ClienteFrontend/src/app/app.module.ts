@@ -17,6 +17,7 @@ import { MatLineModule } from '@angular/material/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { ActualizarClienteComponent } from './actualizar-cliente/actualizar-cliente.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
 
@@ -40,7 +41,8 @@ import { ActualizarClienteComponent } from './actualizar-cliente/actualizar-clie
     MatFormFieldModule,
     MatLineModule,
     MatCardModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatDialogModule
   ],
 
   providers: [ClienteService],
