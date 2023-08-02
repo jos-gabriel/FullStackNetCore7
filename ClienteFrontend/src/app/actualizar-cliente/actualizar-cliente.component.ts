@@ -30,5 +30,11 @@ export class ActualizarClienteComponent {
                 })
               }
 
+  cerrar(){
+    
+  }
 
+  guardar(){
+
+  }
 }
