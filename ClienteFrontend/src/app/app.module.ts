@@ -9,6 +9,7 @@ import { AppRouterModule } from './app-router.module';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule } from '@angular/material/table';
+import { CrearClienteComponent } from './crear-cliente/crear-cliente.component';
 
 @NgModule({
 
@@ -16,7 +17,8 @@ import { MatTableModule } from '@angular/material/table';
     AppComponent,
     ClientesComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    CrearClienteComponent
   ],
 
   imports: [  
