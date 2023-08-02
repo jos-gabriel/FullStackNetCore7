@@ -16,6 +16,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatLineModule } from '@angular/material/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { ActualizarClienteComponent } from './actualizar-cliente/actualizar-cliente.component';
 
 @NgModule({
 
@@ -24,7 +25,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     ClientesComponent,
     HeaderComponent,
     FooterComponent,
-    CrearClienteComponent
+    CrearClienteComponent,
+    ActualizarClienteComponent
   ],
 
   imports: [  
