@@ -1,9 +1,9 @@
 export interface ClienteInterface {
     
-    id: number
-    nombres: string
-    apellidos: string
-    direccion: string
-    telefono: string
+    id?: number | null
+    nombres?: string | null
+    apellidos?: string | null
+    direccion?: string | null
+    telefono?: string | null
     
 }
