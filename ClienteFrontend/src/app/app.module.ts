@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule } from '@angular/material/table';
 import { CrearClienteComponent } from './crear-cliente/crear-cliente.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
 
@@ -26,12 +27,13 @@ import { CrearClienteComponent } from './crear-cliente/crear-cliente.component';
     AppRouterModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatTableModule
+    MatTableModule,
+    ReactiveFormsModule
   ],
 
   providers: [ClienteService],
   bootstrap: [AppComponent]
-  
+
 })
 
 export class AppModule { }

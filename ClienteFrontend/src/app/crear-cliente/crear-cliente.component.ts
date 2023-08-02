@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-crear-cliente',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./crear-cliente.component.css']
 })
 export class CrearClienteComponent {
+
+  clienteForm = new FormGroup({
+    nombres: new FormControl('', Validators.required),
+    apellidos: new FormControl('', Validators.required),
+    direccionn: new FormControl('', Validators.required),
+    telefono: new FormControl('', Validators.required)
+  })
 
 }
