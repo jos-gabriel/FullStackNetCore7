@@ -11,8 +11,12 @@ export class CrearClienteComponent {
   clienteForm = new FormGroup({
     nombres: new FormControl('', Validators.required),
     apellidos: new FormControl('', Validators.required),
-    direccionn: new FormControl('', Validators.required),
+    direccion: new FormControl('', Validators.required),
     telefono: new FormControl('', Validators.required)
   })
+
+  onSubmit() {
+    console.log(this.clienteForm.value)
+  }
 
 }
