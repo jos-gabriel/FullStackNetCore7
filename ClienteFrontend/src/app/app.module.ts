@@ -5,6 +5,7 @@ import { ClientesComponent } from './clientes/clientes.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ClienteService } from './cliente.service';
+import { AuthService } from './auth.service';
 import { AppRouterModule } from './app-router.module';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -51,7 +52,10 @@ import { MatListModule } from '@angular/material/list';
     MatListModule
   ],
 
-  providers: [ClienteService],
+  providers: [
+    ClienteService,
+    AuthService
+  ],
   bootstrap: [AppComponent]
 
 })
