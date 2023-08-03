@@ -4,6 +4,7 @@ import { NgModule } from "@angular/core";
 import { CrearClienteComponent } from "./crear-cliente/crear-cliente.component";
 import { DeleteClienteComponent } from "./delete-cliente/delete-cliente.component";
 import { RegisterComponent } from "./register/register.component";
+import { LoginComponent } from "./login/login.component";
 
 // route
 const routes:Routes = [
@@ -11,7 +12,8 @@ const routes:Routes = [
     {path: 'clientes', component: ClientesComponent},
     {path: 'crear-cliente', component: CrearClienteComponent},
     {path: 'delete-cliente/:id',component: DeleteClienteComponent},
-    {path: 'register', component: RegisterComponent}
+    {path: 'register', component: RegisterComponent},
+    {path: 'login', component: LoginComponent}
 ]
 
 @NgModule({

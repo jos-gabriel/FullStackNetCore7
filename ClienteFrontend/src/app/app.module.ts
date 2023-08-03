@@ -12,6 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule } from '@angular/material/table';
 import { CrearClienteComponent } from './crear-cliente/crear-cliente.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatLineModule } from '@angular/material/core';
@@ -53,7 +54,8 @@ import { LoginComponent } from './login/login.component';
     MatToolbarModule,
     MatDialogModule,
     MatButtonModule,
-    MatListModule
+    MatListModule,
+    FormsModule
   ],
 
   providers: [
