@@ -26,6 +26,7 @@ import { MatListModule } from '@angular/material/list';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
 
@@ -57,7 +58,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatButtonModule,
     MatListModule,
     FormsModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatIconModule
   ],
 
   providers: [
