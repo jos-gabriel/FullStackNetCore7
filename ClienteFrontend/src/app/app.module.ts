@@ -22,6 +22,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { DeleteClienteComponent } from './delete-cliente/delete-cliente.component';
 import { MatListModule } from '@angular/material/list';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
 
@@ -32,7 +33,8 @@ import { MatListModule } from '@angular/material/list';
     FooterComponent,
     CrearClienteComponent,
     ActualizarClienteComponent,
-    DeleteClienteComponent
+    DeleteClienteComponent,
+    RegisterComponent
   ],
 
   imports: [  
