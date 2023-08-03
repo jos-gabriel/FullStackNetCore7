@@ -25,6 +25,7 @@ import { DeleteClienteComponent } from './delete-cliente/delete-cliente.componen
 import { MatListModule } from '@angular/material/list';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
 
@@ -55,7 +56,8 @@ import { LoginComponent } from './login/login.component';
     MatDialogModule,
     MatButtonModule,
     MatListModule,
-    FormsModule
+    FormsModule,
+    MatPaginatorModule
   ],
 
   providers: [
