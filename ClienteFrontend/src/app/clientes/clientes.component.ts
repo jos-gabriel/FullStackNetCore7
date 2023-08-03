@@ -4,6 +4,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { ClienteInterface } from '../interfaces/ClienteInterface';
 import { MatDialog } from '@angular/material/dialog';
 import { ActualizarClienteComponent } from '../actualizar-cliente/actualizar-cliente.component';
+import { Router } from '@angular/router';
 
 @Component({
 
@@ -24,14 +25,18 @@ export class ClientesComponent {
     'acciones'
   ]
 
-  constructor(private service: ClienteService,
-              private dialog: MatDialog) { }
+  constructor(
+    private service: ClienteService,
+    private dialog: MatDialog,
+    private router: Router
+    ) { }
 
   ngOnInit(): void {
 
     this.service.getClientes().subscribe((data:any) => {
       this.dataSource = new MatTableDataSource<ClienteInterface>(data.result as ClienteInterface[])
-    })
+    },
+    (errorData) => this.router.navigate(['/login']))
 
   }
 
