@@ -40,6 +40,10 @@ export class ClientesComponent {
 
   }
 
+  aplicarFiltro(filtro: any) {
+    this.dataSource.filter = filtro.target.value.trim().toLowerCase()
+  }
+
   actualizarCliente(cliente: ClienteInterface){
     console.log(cliente)
 
