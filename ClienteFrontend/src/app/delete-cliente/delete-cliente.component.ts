@@ -11,6 +11,13 @@ export class DeleteClienteComponent {
 
   id: any;
 
+  cliente = {
+    nombres: '',
+    apellidos: '',
+    direccion: '',
+    telefono: ''
+  }
+
   constructor(
     private service:ClienteService,
     private route: ActivatedRoute
@@ -22,8 +29,22 @@ export class DeleteClienteComponent {
 
     this.service.getCliente(this.id).subscribe((data: any) =>{
       console.log(data)
+
+      this.cliente.nombres = data.result.nombres
+      this.cliente.apellidos = data.result.apellidos
+      this.cliente.direccion = data.result.direccion
+      this.cliente.telefono = data.result.telefono
+
     })
 
+  }
+
+  cancel(){
+
+  }
+
+  confirmar(){
+    
   }
 
 }

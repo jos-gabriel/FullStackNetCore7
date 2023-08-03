@@ -20,6 +20,7 @@ import { ActualizarClienteComponent } from './actualizar-cliente/actualizar-clie
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { DeleteClienteComponent } from './delete-cliente/delete-cliente.component';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
 
@@ -46,7 +47,8 @@ import { DeleteClienteComponent } from './delete-cliente/delete-cliente.componen
     MatCardModule,
     MatToolbarModule,
     MatDialogModule,
-    MatButtonModule
+    MatButtonModule,
+    MatListModule
   ],
 
   providers: [ClienteService],
