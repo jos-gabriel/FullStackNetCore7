@@ -19,6 +19,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { ActualizarClienteComponent } from './actualizar-cliente/actualizar-cliente.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
+import { DeleteClienteComponent } from './delete-cliente/delete-cliente.component';
 
 @NgModule({
 
@@ -28,7 +29,8 @@ import { MatButtonModule } from '@angular/material/button';
     HeaderComponent,
     FooterComponent,
     CrearClienteComponent,
-    ActualizarClienteComponent
+    ActualizarClienteComponent,
+    DeleteClienteComponent
   ],
 
   imports: [  
