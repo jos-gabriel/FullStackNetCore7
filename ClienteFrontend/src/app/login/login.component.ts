@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -12,8 +14,18 @@ export class LoginComponent {
     password:''
   }
 
+  constructor(
+    private service: AuthService,
+    private router: Router
+  ){ }
+
   login() {
-    
+    this.service.login(this.loginData).subscribe((data: any) => {
+      localStorage.setItem('userName', data.result.userName)
+      localStorage.setItem('token_value', data.result.token)
+      this.router.navigate(['/clientes'])
+    },
+    (errorData) => alert(errorData.error.displayMessage))
   }
 
 }
