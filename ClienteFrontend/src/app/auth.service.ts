@@ -20,5 +20,13 @@ export class AuthService {
   login(user: UserInterface) {
     return this.http.post(this.baseUrl + 'Login', user)
   }
+
+  get getUsername() {
+    return localStorage.getItem('userName')
+  }
+
+  get isAutenticado() {
+    return !!localStorage.getItem('token_value')
+  }
   
 }

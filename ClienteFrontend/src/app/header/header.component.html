@@ -3,5 +3,6 @@
     <button mat-button routerLink = '/clientes'>Clientes</button>
     <button mat-button routerLink = '/crear-cliente'>Nuevo cliente</button>
     <span style="flex:auto"></span>
+    <button mat-button *ngIf="auth.isAutenticado">Bienvenido {{auth.getUsername}}</button>
     <button mat-button routerLink="/register">Registrarse</button>
 </mat-toolbar>

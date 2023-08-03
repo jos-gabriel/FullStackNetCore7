@@ -30,7 +30,7 @@ export class RegisterComponent {
 
   onSubmit(){
     this.service.register(this.registerForm.value).subscribe((data: any) => {
-      localStorage.setItem('userName', data.result.username)
+      localStorage.setItem('userName', data.result.userName)
       localStorage.setItem('token_value', data.result.token)
       alert(data.displayMessage)
       this.router.navigate(['/clientes'])
