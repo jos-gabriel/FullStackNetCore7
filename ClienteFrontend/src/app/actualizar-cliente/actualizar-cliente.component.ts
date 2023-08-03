@@ -1,6 +1,8 @@
 import { Component, Inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { ClienteService } from '../cliente.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-actualizar-cliente',
@@ -14,6 +16,8 @@ export class ActualizarClienteComponent {
 
   constructor(private fb: FormBuilder,
               private dialogRef: MatDialogRef<ActualizarClienteComponent>,
+              private service: ClienteService,
+              private router: Router,
               @Inject(MAT_DIALOG_DATA) private data: {
                 nombres: string
                 apellidos: string
@@ -31,10 +35,19 @@ export class ActualizarClienteComponent {
               }
 
   cerrar(){
-    
+    this.dialogRef.close()
   }
 
   guardar(){
+
+    this.form.value.id = this.id
+    this.service.actualizarCliente(this.id, this.form.value).subscribe((data) => {
+      
+      this.router.navigate(['/clientes'])
+      window.location.reload()
+
+    })
+    this.dialogRef.close()
 
   }
 }

@@ -8,7 +8,7 @@ import { ClienteInterface } from './interfaces/ClienteInterface';
 
 export class ClienteService {
 
-  baseUrl: string = 'https://localhost:7120/api/Clientes'
+  baseUrl: string = 'https://localhost:7120/api/Clientes/'
 
   constructor(private http: HttpClient) { }
 
@@ -16,7 +16,12 @@ export class ClienteService {
     return this.http.get(this.baseUrl);
   }
 
-crearCliente(cliente: ClienteInterface){
-  return this.http.post(this.baseUrl, cliente);
-}
+  crearCliente(cliente: ClienteInterface){
+    return this.http.post(this.baseUrl, cliente);
+  }
+
+  actualizarCliente(id:number, cliente:ClienteInterface){
+    return this.http.put(this.baseUrl + id, cliente)
+  }
+
 }
