@@ -1,24 +1,30 @@
 <mat-card>
 
-    <span>Crear nuevo cliente</span>
+    <mat-card-header>
+        <mat-card-title>
+            Crear nuevo cliente
+        </mat-card-title>
+    </mat-card-header>
+
     <form [formGroup] = "clienteForm" (ngSubmit) = "onSubmit()">
+        <mat-card-content>
+            <mat-form-field class="crear-cliente-field">
+                <input matInput placeholder="Nombres del Cliente" formControlName = "nombres"/>
+            </mat-form-field>
+            <mat-form-field class="crear-cliente-field">
+                <input matInput placeholder="Apellidos del Cliente" formControlName = "apellidos"/>
+            </mat-form-field>
+            <mat-form-field class="crear-cliente-field">
+                <input matInput placeholder="Dirección del Cliente" formControlName = "direccion"/>
+            </mat-form-field>
+            <mat-form-field class="crear-cliente-field">
+                <input matInput placeholder="Teléfono del Cliente" formControlName = "telefono"/>
+            </mat-form-field>
 
-        <mat-form-field class="crear-cliente-field">
-            <input matInput placeholder="Nombres del Cliente" formControlName = "nombres"/>
-        </mat-form-field>
-        <mat-form-field class="crear-cliente-field">
-            <input matInput placeholder="Apellidos del Cliente" formControlName = "apellidos"/>
-        </mat-form-field>
-        <mat-form-field class="crear-cliente-field">
-            <input matInput placeholder="Direccion del Cliente" formControlName = "direccion"/>
-        </mat-form-field>
-        <mat-form-field class="crear-cliente-field">
-            <input matInput placeholder="Telefono del Cliente" formControlName = "telefono"/>
-        </mat-form-field>
-
-        <button mat-raised-button [disabled] = "!clienteForm.valid" >
-            Crear Nuevo
-        </button>
+            <button mat-raised-button [disabled] = "!clienteForm.valid" >
+                Crear Nuevo
+            </button>
+        </mat-card-content>
     </form>
 
 </mat-card>
