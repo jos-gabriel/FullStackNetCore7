@@ -2,19 +2,23 @@
 
 <mat-dialog-content [formGroup]="form">
     <mat-form-field class="crear-cliente-field">
-        <input matInput placeholder="Nombres del Cliente" formControlName = "nombres"/>
+        <mat-label>Nombres del Cliente </mat-label>
+        <input matInput formControlName = "nombres"/>
     </mat-form-field>
     <br/>
     <mat-form-field class="crear-cliente-field">
-        <input matInput placeholder="Apellidos del Cliente" formControlName = "apellidos"/>
+        <mat-label>Apellidos del Cliente </mat-label>
+        <input matInput formControlName = "apellidos"/>
     </mat-form-field>
     <br/>
     <mat-form-field class="crear-cliente-field">
-        <input matInput placeholder="Direccion del Cliente" formControlName = "direccion"/>
+        <mat-label>Direccion del Cliente </mat-label>
+        <input matInput formControlName = "direccion"/>
     </mat-form-field>
     <br/>
     <mat-form-field class="crear-cliente-field">
-        <input matInput placeholder="Telefono del Cliente" formControlName = "telefono"/>
+        <mat-label>Telefono del Cliente </mat-label>
+        <input matInput formControlName = "telefono"/>
     </mat-form-field>
 </mat-dialog-content>
 

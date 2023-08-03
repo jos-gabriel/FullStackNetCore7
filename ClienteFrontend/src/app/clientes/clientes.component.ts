@@ -20,6 +20,7 @@ export class ClientesComponent {
     'nombres',
     'apellidos',
     'direccion',
+    'telefono',
     'acciones'
   ]
 
