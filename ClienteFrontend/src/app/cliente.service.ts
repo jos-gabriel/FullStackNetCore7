@@ -28,4 +28,8 @@ export class ClienteService {
     return this.http.put(this.baseUrl + id, cliente)
   }
 
+  deleteCliente(id: number){
+    return this.http.delete(this.baseUrl + id)
+  }
+
 }

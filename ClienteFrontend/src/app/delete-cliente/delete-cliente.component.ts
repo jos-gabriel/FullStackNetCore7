@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ClienteService } from '../cliente.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-delete-cliente',
@@ -20,7 +20,8 @@ export class DeleteClienteComponent {
 
   constructor(
     private service:ClienteService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -40,11 +41,13 @@ export class DeleteClienteComponent {
   }
 
   cancel(){
-
+    this.router.navigate(['/'])
   }
 
   confirmar(){
-    
+    this.service.deleteCliente(this.id).subscribe((data: any) => {
+      this.router.navigate(['/'])
+    })
   }
 
 }
