@@ -16,6 +16,10 @@ export class ClienteService {
     return this.http.get(this.baseUrl);
   }
 
+  getCliente(id: number){
+    return this.http.get(this.baseUrl+id)
+  }
+
   crearCliente(cliente: ClienteInterface){
     return this.http.post(this.baseUrl, cliente);
   }
