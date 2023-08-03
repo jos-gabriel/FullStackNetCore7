@@ -23,6 +23,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { DeleteClienteComponent } from './delete-cliente/delete-cliente.component';
 import { MatListModule } from '@angular/material/list';
 import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
 
@@ -34,7 +35,8 @@ import { RegisterComponent } from './register/register.component';
     CrearClienteComponent,
     ActualizarClienteComponent,
     DeleteClienteComponent,
-    RegisterComponent
+    RegisterComponent,
+    LoginComponent
   ],
 
   imports: [  
